@@ -40,6 +40,12 @@
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		39370034641A49888995C53D /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D01B9F1E25F45EC905C192E /* libAirMaps.a */; };
+		F567AD92FEBD431CAA5ABE84 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 175E7CFC5BA64384AC6AC665 /* libRNGestureHandler.a */; };
+		E79259BC19C647C993939DC1 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0F391561814A67A50960BB /* libRNGestureHandler-tvOS.a */; };
+		BCF8CC7D9C57405CB2975461 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7E24384D814B709378CCF2 /* libReactNativeConfig.a */; };
+		69D8470DA3624F209E30088F /* libReactNativeConfig-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38500C8404D44EB08E44D62F /* libReactNativeConfig-tvOS.a */; };
+		35AD8B13E3424F3B822E33D4 /* libRNUUIDGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46994804588342BBB7F9857E /* libRNUUIDGenerator.a */; };
+		82BEBE58ECFF443E8B6808CA /* libRNGeocoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6D0213C736C4BFF87466BC1 /* libRNGeocoder.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -349,6 +355,16 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		00A01FD1401C4AFA8FF03DE8 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; name = "AirMaps.xcodeproj"; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		7D01B9F1E25F45EC905C192E /* libAirMaps.a */ = {isa = PBXFileReference; name = "libAirMaps.a"; path = "libAirMaps.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		3B7336CD0819423E959F51EE /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		175E7CFC5BA64384AC6AC665 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		9E0F391561814A67A50960BB /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; name = "libRNGestureHandler-tvOS.a"; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		D4C6DDF708534F0190B4A5C6 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; name = "ReactNativeConfig.xcodeproj"; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		1A7E24384D814B709378CCF2 /* libReactNativeConfig.a */ = {isa = PBXFileReference; name = "libReactNativeConfig.a"; path = "libReactNativeConfig.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		38500C8404D44EB08E44D62F /* libReactNativeConfig-tvOS.a */ = {isa = PBXFileReference; name = "libReactNativeConfig-tvOS.a"; path = "libReactNativeConfig-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		AE3BD0E58C894CFB930D9301 /* RNUUIDGenerator.xcodeproj */ = {isa = PBXFileReference; name = "RNUUIDGenerator.xcodeproj"; path = "../node_modules/react-native-uuid-generator/ios/RNUUIDGenerator.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		46994804588342BBB7F9857E /* libRNUUIDGenerator.a */ = {isa = PBXFileReference; name = "libRNUUIDGenerator.a"; path = "libRNUUIDGenerator.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		32375C0254E14EA19611A246 /* RNGeocoder.xcodeproj */ = {isa = PBXFileReference; name = "RNGeocoder.xcodeproj"; path = "../node_modules/react-native-geocoder/ios/RNGeocoder.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		D6D0213C736C4BFF87466BC1 /* libRNGeocoder.a */ = {isa = PBXFileReference; name = "libRNGeocoder.a"; path = "libRNGeocoder.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +394,10 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				39370034641A49888995C53D /* libAirMaps.a in Frameworks */,
+				F567AD92FEBD431CAA5ABE84 /* libRNGestureHandler.a in Frameworks */,
+				BCF8CC7D9C57405CB2975461 /* libReactNativeConfig.a in Frameworks */,
+				35AD8B13E3424F3B822E33D4 /* libRNUUIDGenerator.a in Frameworks */,
+				82BEBE58ECFF443E8B6808CA /* libRNGeocoder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +414,8 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				E79259BC19C647C993939DC1 /* libRNGestureHandler-tvOS.a in Frameworks */,
+				69D8470DA3624F209E30088F /* libReactNativeConfig-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +590,10 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				00A01FD1401C4AFA8FF03DE8 /* AirMaps.xcodeproj */,
+				3B7336CD0819423E959F51EE /* RNGestureHandler.xcodeproj */,
+				D4C6DDF708534F0190B4A5C6 /* ReactNativeConfig.xcodeproj */,
+				AE3BD0E58C894CFB930D9301 /* RNUUIDGenerator.xcodeproj */,
+				32375C0254E14EA19611A246 /* RNGeocoder.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1196,10 +1222,20 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-uuid-generator/ios",
+					"$(SRCROOT)/../node_modules/react-native-geocoder/ios/RNGeocoder",
 				);
 			};
 			name = Debug;
@@ -1222,10 +1258,20 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-uuid-generator/ios",
+					"$(SRCROOT)/../node_modules/react-native-geocoder/ios/RNGeocoder",
 				);
 			};
 			name = Release;
@@ -1249,6 +1295,10 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-uuid-generator/ios",
+					"$(SRCROOT)/../node_modules/react-native-geocoder/ios/RNGeocoder",
 				);
 			};
 			name = Debug;
@@ -1271,6 +1321,10 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-uuid-generator/ios",
+					"$(SRCROOT)/../node_modules/react-native-geocoder/ios/RNGeocoder",
 				);
 			};
 			name = Release;
@@ -1301,10 +1355,20 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-uuid-generator/ios",
+					"$(SRCROOT)/../node_modules/react-native-geocoder/ios/RNGeocoder",
 				);
 			};
 			name = Debug;
@@ -1335,10 +1399,20 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-uuid-generator/ios",
+					"$(SRCROOT)/../node_modules/react-native-geocoder/ios/RNGeocoder",
 				);
 			};
 			name = Release;
@@ -1368,10 +1442,20 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-uuid-generator/ios",
+					"$(SRCROOT)/../node_modules/react-native-geocoder/ios/RNGeocoder",
 				);
 			};
 			name = Debug;
@@ -1401,10 +1485,20 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-gesture-handler/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
+					"$(SRCROOT)/../node_modules/react-native-uuid-generator/ios",
+					"$(SRCROOT)/../node_modules/react-native-geocoder/ios/RNGeocoder",
 				);
 			};
 			name = Release;
