@@ -6,6 +6,7 @@ import styles from '../Styles/Map';
 import AddButton from '../Components/AddButton';
 import ListButton from '../Components/ListButton';
 import { routes } from '../Navigation';
+import { getAllMarkers } from '../Actions';
 
 class Map extends PureComponent {
 
@@ -32,19 +33,15 @@ class Map extends PureComponent {
   updateMap = () => {
     const markers = this.getMarkers();
     if (!this.map || !markers.length || !this.state.mapReady) return;
-
     this.map.fitToElements(true);
-    // this.map.fitToCoordinates(
-    //   markers,
-    //   {
-    //     edgePadding: { top: 50, right: 10, bottom: 10, left: 10 },
-    //     animated: true,
-    //   }
-    // );
   };
 
   onMapLayout = () => {
     this.setState({ mapReady: true }, this.updateMap);
+  }
+
+  componentDidMount() {
+    this.props.getAllMarkers();
   }
 
   componentDidUpdate() {
@@ -76,4 +73,8 @@ const mapStateToProps = ({ markers }) => ({
   markers,
 });
 
-export default withNavigationFocus(connect(mapStateToProps)(Map));
+const mapDispatchToProps = {
+  getAllMarkers,
+};
+
+export default withNavigationFocus(connect(mapStateToProps, mapDispatchToProps)(Map));

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import isLatLong from 'validator/lib/isLatLong';
 import InputBox from '../Components/InputBox';
 import styles from '../Styles/Form';
-import { addOrUpdateMarker } from '../Actions';
+import { addOrUpdateMarker, createMarkerRequest } from '../Actions';
 import { routes } from '../Navigation';
 
 class Form extends PureComponent {
@@ -19,7 +19,7 @@ class Form extends PureComponent {
   };
 
   onSubmit = async () => {
-    const { addOrUpdateMarker, navigation: { navigate, getParam } } = this.props;
+    const { addOrUpdateMarker, navigation: { navigate, getParam }, createMarkerRequest } = this.props;
     let nameError = '', latitudeError = '', longitudeError = '';
     const name = this.state.name.trim();
     const latitude = this.state.latitude.trim();
@@ -55,17 +55,13 @@ class Form extends PureComponent {
 
     if (!nameError && !latitudeError && !longitudeError) {
       // proceed to submit
-      const uuid = getParam('uuid', '');
-      // const uuid = hasUuid || await UUIDGenerator.getRandomUUID();
-      const marker = {
-        uuid,
+      addOrUpdateMarker({
+        uuid: getParam('uuid', ''),
         name,
         latitude: Number(latitude),
         longitude: Number(longitude),
         address: 'fetching address...',
-      }
-
-      addOrUpdateMarker(marker);
+      });
       navigate(routes.map);
     }
   };
@@ -132,6 +128,7 @@ const mapStateToProps = () => ({});
 
 const mapDispatchToProps = {
   addOrUpdateMarker,
+  createMarkerRequest,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);
