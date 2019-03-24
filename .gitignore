@@ -56,3 +56,11 @@ buck-out/
 *.jsbundle
 
 yarn.lock
+
+index.android.bundle
+android/app/src/main/res/drawable-*
+.vscode
+.project
+.settings
+.classpath
+.env

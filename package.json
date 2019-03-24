@@ -5,11 +5,20 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "android": "react-native run-android",
+    "preandroid:assets": "mkdir -p android/app/src/main/assets && mkdir -p android/app/src/main/res",
+    "android:assets": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "preandroid:build": "rm -rf ./android/app/build/outputs/apk/debug",
+    "android:build": "cd android && ./gradlew assembleDebug",
+    "preandroid:clean": "rm -rf android/app/src/main/assets/index.android.bundle && rm -rf android/app/src/main/res/drawable-*",
+    "android:clean": "cd android && ./gradlew clean",
+    "android:log": "react-native log-android"
   },
   "dependencies": {
     "react": "16.8.3",
-    "react-native": "0.59.1"
+    "react-native": "0.59.1",
+    "react-native-maps": "^0.23.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
@@ -19,6 +28,7 @@
     "eslint": "^5.15.3",
     "jest": "^24.5.0",
     "metro-react-native-babel-preset": "^0.53.1",
+    "react-native-dotenv": "^0.2.0",
     "react-test-renderer": "16.8.3"
   },
   "jest": {

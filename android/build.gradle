@@ -5,15 +5,17 @@ buildscript {
         buildToolsVersion = "28.0.3"
         minSdkVersion = 16
         compileSdkVersion = 28
-        targetSdkVersion = 28
+        targetSdkVersion = 27
         supportLibVersion = "28.0.0"
+        googlePlayServicesVersion = "16.1.0"
+        androidMapsUtilsVersion = "0.5"
     }
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.1'
+        classpath 'com.android.tools.build:gradle:3.3.2'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -21,6 +23,15 @@ buildscript {
 }
 
 allprojects {
+    configurations.all {
+        resolutionStrategy {
+            force "com.android.support:support-compat:${rootProject.ext.supportLibVersion}"
+            force "com.android.support:support-core-utils:${rootProject.ext.supportLibVersion}"
+            force "com.android.support:support-core-ui:${rootProject.ext.supportLibVersion}"
+            force "com.android.support:support-fragment:${rootProject.ext.supportLibVersion}"
+            force "com.google.maps.android:android-maps-utils:${rootProject.ext.androidMapsUtilsVersion}"
+        }
+    }
     repositories {
         mavenLocal()
         google()
@@ -29,5 +40,11 @@ allprojects {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"
         }
+        maven { url 'https://maven.google.com' }
     }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.10.1'
+    distributionUrl = distributionUrl.replace("bin", "all")
 }
