@@ -28,6 +28,12 @@ yarn android:assets
 yarn android:build
 ```
 
+## Run tests
+
+```
+yarn test -u
+```
+
 ## Design considerations
 
 Before discussing what decisions I've made to use specific libraries, I'll jot down my assumptions.

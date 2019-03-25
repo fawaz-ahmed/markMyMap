@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing AddButton renders as expected 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  style={
+    Object {
+      "bottom": 35,
+      "position": "absolute",
+      "right": 23,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#0099CC",
+        "borderRadius": 23.5,
+        "height": 47,
+        "justifyContent": "center",
+        "paddingBottom": 3,
+        "width": 47,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 30,
+        }
+      }
+    >
+      +
+    </Text>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Testing InputBox renders as expected 1`] = `
+<TextField
+  activeLineWidth={0.5}
+  animationDuration={225}
+  autoCapitalize="sentences"
+  baseColor="rgb(135,135,135)"
+  containerStyle={
+    Object {
+      "marginBottom": 0,
+    }
+  }
+  disableFullscreenUI={true}
+  disabled={false}
+  disabledLineType="dotted"
+  disabledLineWidth={1}
+  editable={true}
+  errorColor="rgb(213, 0, 0)"
+  fontSize={16}
+  inputContainerPadding={8}
+  label="label"
+  labelFontSize={12}
+  labelHeight={32}
+  labelPadding={12}
+  lineWidth={0.5}
+  textColor="rgb(51,51,51)"
+  tintColor="rgb(135,135,135)"
+  titleFontSize={12}
+  underlineColorAndroid="transparent"
+/>
+`;
+
+exports[`Testing ListButton renders as expected 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  style={
+    Object {
+      "bottom": 92,
+      "position": "absolute",
+      "right": 23,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#0099CC",
+        "borderRadius": 23.5,
+        "height": 47,
+        "justifyContent": "center",
+        "paddingBottom": 3,
+        "width": 47,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 30,
+        }
+      }
+    >
+      ≡
+    </Text>
+  </View>
+</TouchableOpacity>
+`;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TouchableOpacity, Text, View } from 'react-native';
 import styles from '../Styles/Button';
 
-export default class AddButton extends PureComponent {
+export default class ListButton extends PureComponent {
 
   render() {
     const { onPress } = this.props;
@@ -18,6 +18,6 @@ export default class AddButton extends PureComponent {
   }
 }
 
-AddButton.propTypes = {
+ListButton.propTypes = {
   onPress: PropTypes.func,
 };

@@ -77,4 +77,4 @@ const mapDispatchToProps = {
   getAllMarkers,
 };
 
-export default withNavigationFocus(connect(mapStateToProps, mapDispatchToProps)(Map));
+export default connect(mapStateToProps, mapDispatchToProps)(withNavigationFocus(Map));
