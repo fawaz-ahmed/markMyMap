@@ -1,5 +1,11 @@
 import { combineReducers } from 'redux';
-import { SAVE_MARKER, DELETE_MARKER, SAVE_ALL_MARKERS } from '../Actions';
+import {
+  SAVE_MARKER,
+  DELETE_MARKER,
+  SAVE_ALL_MARKERS,
+  CREATE_MARKER,
+  UPDATE_MARKER,
+} from '../Actions';
 
 const markers = (state = {}, action) => {
   switch(action.type) {
@@ -8,10 +14,25 @@ const markers = (state = {}, action) => {
         ...state,
         [action.marker.uuid]: action.marker,
       };
+    case CREATE_MARKER:
+      return {
+        ...state,
+        [action.payload.uuid]: action.payload,
+      };
+    case UPDATE_MARKER:
+      return {
+        ...state,
+        [action.payload.uuid]: action.payload,
+      };
+    case CREATE_MARKER:
+      return {
+        ...state,
+        [action.payload.uuid]: action.payload,
+      };
     case SAVE_ALL_MARKERS:
-      return action.markers;
+      return action.payload;
     case DELETE_MARKER:
-      delete state[action.uuid];
+      delete state[action.payload];
       return {
         ...state,
       };

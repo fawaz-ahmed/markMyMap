@@ -1,6 +1,6 @@
 import React, { forwardRef, memo } from 'react';
 import { TextField } from 'react-native-material-textfield';
-import Colors from '../Colors';
+import Colors from '../Styles/Colors';
 
 export default memo(forwardRef((props, ref) => (
   <TextField

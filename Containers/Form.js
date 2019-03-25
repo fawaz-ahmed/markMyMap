@@ -1,11 +1,13 @@
 import React, { PureComponent } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, InteractionManager } from 'react-native';
+import UUIDGenerator from 'react-native-uuid-generator';
 import { connect } from 'react-redux';
 import isLatLong from 'validator/lib/isLatLong';
 import InputBox from '../Components/InputBox';
 import styles from '../Styles/Form';
-import { addOrUpdateMarker, createMarkerRequest } from '../Actions';
+import { createMarker, saveMarker, updateMarker } from '../Actions';
 import { routes } from '../Navigation';
+import { getAddress } from '../Helpers';
 
 class Form extends PureComponent {
 
@@ -19,7 +21,8 @@ class Form extends PureComponent {
   };
 
   onSubmit = async () => {
-    const { addOrUpdateMarker, navigation: { navigate, getParam }, createMarkerRequest } = this.props;
+    const { saveMarker, createMarker, updateMarker,
+      navigation: { navigate, getParam, goBack } } = this.props;
     let nameError = '', latitudeError = '', longitudeError = '';
     const name = this.state.name.trim();
     const latitude = this.state.latitude.trim();
@@ -55,14 +58,30 @@ class Form extends PureComponent {
 
     if (!nameError && !latitudeError && !longitudeError) {
       // proceed to submit
-      addOrUpdateMarker({
-        uuid: getParam('uuid', ''),
+      const hasUuid = !!getParam('uuid', '');
+
+      const marker = {
+        uuid: hasUuid ? getParam('uuid', '') : await UUIDGenerator.getRandomUUID(),
         name,
         latitude: Number(latitude),
         longitude: Number(longitude),
         address: 'fetching address...',
-      });
+      };
+
+      saveMarker(marker);
       navigate(routes.map);
+
+      InteractionManager.runAfterInteractions(async () => {
+        marker.address = await getAddress({ latitude, longitude });
+
+        if(hasUuid) {
+          // Update marker
+          updateMarker(marker);
+        } else {
+          // Create marker
+          createMarker(marker);
+        }
+      });
     }
   };
 
@@ -127,8 +146,9 @@ class Form extends PureComponent {
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = {
-  addOrUpdateMarker,
-  createMarkerRequest,
+  saveMarker,
+  createMarker,
+  updateMarker,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);
